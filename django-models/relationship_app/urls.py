@@ -5,7 +5,7 @@ from . import views
 from .views import librarian_view, member_view
 from .admin_view import admin_view
 from .views import list_books
-
+from .views import list_books
 
 urlpatterns = [
     path('books/', list_books, name='list_all_books'),
