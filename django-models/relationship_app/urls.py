@@ -4,6 +4,7 @@ from .views import list_books, LibraryDetailView, index, add_book, change_book, 
 from . import views
 from .views import librarian_view, member_view
 from .admin_view import admin_view
+from .views import list_books
 
 
 urlpatterns = [
