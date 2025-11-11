@@ -1,6 +1,25 @@
 
+## **retrieve.md**
+
+```markdown
+# Retrieve Operation
+
+**Objective:** Retrieve and display all attributes of the book created in the previous step.
+
+**Command:**
+
+```python
 from bookshelf.models import Book
 
-Book.objects.get(id=product_id)
+# Retrieve the Book instance with title "1984"
+book = Book.objects.get(title="1984")
 
-Result: <Book: 1984 by George Orwell (1949)>
+# Display all attributes of the retrieved book
+print("Title:", book.title)
+print("Author:", book.author)
+print("Published year:", book.publication_year)
+
+#Expected output
+#Title: 1984
+#Author: George Orwell
+#Published year: 1949

@@ -1,7 +1,23 @@
+## **delete.md**
+
+```markdown
+# Delete Operation
+
+**Objective:** Delete the book with the updated title and confirm the deletion.
+
+**Command:**
+
+```python
 from bookshelf.models import Book
 
-Book.objects.filter(publication_year=1949).delete()
+# Retrieve the Book instance with the updated title
+book = Book.objects.get(title="Nineteen Eighty-Four")
 
-["book.delete"]
+# Delete the Book instance
+book.delete()
 
-Returns: (1, {'bookshelf.Book': 1})
+# Confirm deletion by retrieving all books
+books = Book.objects.all()
+
+#expected output
+# <QuerySet []>
